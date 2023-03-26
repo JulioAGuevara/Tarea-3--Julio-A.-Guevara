@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       const Text('Login',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
               const SizedBox(height: 30,),
-              Container(
+              SizedBox(
                   width: 300,
                   child: TextField(
                     onChanged: (value){
@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
               ),
               const SizedBox(height: 20,),
-              Container(
+              SizedBox(
                   width: 300,
                   child: TextField(
                     decoration: InputDecoration(

@@ -232,33 +232,15 @@ class InfoPage extends StatelessWidget {
 
                 const SizedBox(height: 10,),
 
-                //Profile info card
-                Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  margin: const EdgeInsets.all(0),
-                  shadowColor: Colors.black,
-                  child: ListTile(
-                    
-                    title: const Text('Date of Birth'),
-                    subtitle: const Text('15 Feb 1996', 
-                      style: TextStyle(
-                          fontSize: 20 ,
-                        ),
+                const Cont1btn(
+                  title: Text('Date of Birth'),
+                  subtitle: Text('15 Feb 1996',
+                    style: TextStyle(
+                        fontSize: 20,
                       ),
-                    trailing: Container(
-                      height: 45,
-                      width: 45,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 52, 55, 63),
-                        borderRadius: BorderRadius.circular(45)
-                      ),
-                      child: IconButton(
-                        icon: const Icon(Icons.mode_edit, color: Colors.white,), 
-                        onPressed: (){},)
-                        ),
+                    ), 
+                  btn: RoundBtn(icon: Icon(Icons.mode_edit, color: Colors.white,)),
                   ),
-                ),
 
                 //Contact info text
                 Row(
@@ -279,101 +261,44 @@ class InfoPage extends StatelessWidget {
                   ],
                 ),
 
-                //Contact info card Main
-                Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  margin: const EdgeInsets.all(0),
-                  shadowColor: Colors.black,
-                  child: ListTile(
-                    
-                    title: const Text('Main Number'),
-                    subtitle: const Text('+91 95221 81654', 
-                      style: TextStyle(
-                          fontSize: 20 ,
-                        ),
-                      ),
-                    trailing: Container(
-                      
-                      width: 105,
-                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 45,
-                            width: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 52, 55, 63),
-                              borderRadius: BorderRadius.circular(45)
-                            ),
-                            child: IconButton(
-                              icon: const Icon(Icons.do_disturb, color: Colors.white,), 
-                            onPressed: (){},)
-                          ),
-                          Container(
-                            height: 45,
-                            width: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 52, 55, 63),
-                              borderRadius: BorderRadius.circular(45)
-                            ),
-                            child: IconButton(
-                              icon: const Icon(Icons.mode_edit, color: Colors.white,), 
-                            onPressed: (){},)
-                          ),
-                        ]
-                        ),
+                //Contact info Container Main
+                Cont1btn(
+                  title: const Text('Main Number'), 
+                  subtitle: const Text('+91 95221 81654',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  btn: SizedBox(
+                    width: 105,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        RoundBtn(icon: Icon(Icons.do_disturb, color: Colors.white,)),
+                        RoundBtn(icon: Icon(Icons.mode_edit, color: Colors.white,)),
+                      ],
                     ),
                   ),
                 ),
 
                 const SizedBox(height: 10,),
 
-                //Contact info card Primary
-                Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  margin: const EdgeInsets.all(0),
-                  shadowColor: Colors.black,
-                  child: ListTile(
-                    
-                    title: const Text('Primary Number'),
-                    subtitle: const Text('+91 95221 81654', 
-                      style: TextStyle(
-                          fontSize: 20 ,
-                        ),
-                      ),
-                    trailing: Container(
-                      width: 105,
-                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 45,
-                            width: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 52, 55, 63),
-                              borderRadius: BorderRadius.circular(45)
-                            ),
-                            child: IconButton(
-                              icon: const Icon(Icons.do_disturb, color: Colors.white,), 
-                            onPressed: (){},)
-                          ),
-                          Container(
-                            height: 45,
-                            width: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 52, 55, 63),
-                              borderRadius: BorderRadius.circular(45)
-                            ),
-                            child: IconButton(
-                              icon: const Icon(Icons.mode_edit, color: Colors.white,), 
-                            onPressed: (){},)
-                          ),
-                        ]
-                        ),
+                //Contact info Container Primary
+                Cont1btn(
+                  title: const Text('Primary Number'), 
+                  subtitle: const Text('+91 95221 81654',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                    ),
+                  btn: SizedBox(
+                    width: 105,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        RoundBtn(icon: Icon(Icons.do_disturb, color: Colors.white,)),
+                        RoundBtn(icon: Icon(Icons.mode_edit, color: Colors.white,)),
+                      ],
                     ),
                   ),
                 ),
@@ -399,34 +324,16 @@ class InfoPage extends StatelessWidget {
                   ],
                 ),
 
-                //Email Info Card
-                Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  margin: const EdgeInsets.all(0),
-                  shadowColor: Colors.black,
-                  child: ListTile(
-                    
-                    title: const Text('Main Email'),
-                    subtitle: const Text('test@gmail.com', 
+                //Email Info Container
+                const Cont1btn(
+                  title: Text('Main Email'),
+                  subtitle: Text('test@gmail.com',
                       style: TextStyle(
-                          fontSize: 20 ,
-                          fontWeight: FontWeight.bold
-                        ),
+                        fontSize: 20,
                       ),
-                    trailing: Container(
-                      height: 45,
-                      width: 45,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 52, 55, 63),
-                        borderRadius: BorderRadius.circular(45)
-                      ),
-                      child: IconButton(
-                        icon: const Icon(Icons.delete, color: Colors.white,), 
-                        onPressed: (){},)
-                        ),
+                    ), 
+                  btn: RoundBtn(icon: Icon(Icons.delete, color: Colors.white,)),
                   ),
-                ),
 
                 //Address Info Text
                 Row(
@@ -447,43 +354,35 @@ class InfoPage extends StatelessWidget {
                   ],
                 ),
 
-                //Addres Info Card
-                Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  margin: const EdgeInsets.all(0),
-                  shadowColor: Colors.black,
-                  child: ListTile(
-                    
-                    title: const Text('Home Town Address'),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        SizedBox(height: 5,),
-                        Text('56, Vivek Chowk, Ghatalodiya', style: TextStyle(fontWeight: FontWeight.bold),),
-                        SizedBox(height: 5,),
-                        Text('220523, Ahmedabad', style: TextStyle(fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                      
-                    trailing: Container(
-                      height: 45,
-                      width: 45,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 52, 55, 63),
-                        borderRadius: BorderRadius.circular(45)
-                      ),
-                      child: IconButton(
-                        icon: const Icon(Icons.delete, color: Colors.white,), 
-                        onPressed: (){},)
-                        ),
+                //Address Info Card
+                
+                Cont1btn(
+                  title: const Text('Home Town Address'), 
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      SizedBox(height: 5,),
+                      Text('56, Vivek Chowk, Ghatalodiya', style: TextStyle(fontWeight: FontWeight.bold),),
+                      SizedBox(height: 5,),
+                      Text('220523, Ahmedabad', style: TextStyle(fontWeight: FontWeight.bold),),
+                    ],
+                  ), 
+                  btn: const RoundBtn(icon: Icon(Icons.delete, color: Colors.white,)),
                   ),
-                ),
 
-                const SizedBox(height: 5,),
+                const SizedBox(height: 20,),
 
-                Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                Container(
+
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    boxShadow: const [BoxShadow(
+                      blurRadius: 10,
+                      blurStyle: BlurStyle.outer,
+                      color: Colors.grey,
+                    ),]
+                  ),
+                  
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
                     child: Row(
@@ -511,6 +410,53 @@ class InfoPage extends StatelessWidget {
   }
 }
 
+class Cont1btn extends StatelessWidget {
+  const Cont1btn({super.key, required this.title, required this.subtitle, required this.btn});
+  final title;
+  final subtitle;
+  final btn;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: const [BoxShadow(
+          color: Colors.grey,
+          blurRadius: 10,
+          blurStyle: BlurStyle.outer
+        )],
+      ),
+      child: ListTile(
+        title:  title,
+        subtitle:  subtitle,
+        trailing: btn,
+       ),
+      );
+  }
+}
+
+class RoundBtn extends StatelessWidget {
+  const RoundBtn({super.key, required this.icon});
+
+  final icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 45,
+      width: 45,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 52, 55, 63),
+        borderRadius: BorderRadius.circular(45)
+      ),
+      child: IconButton(
+        icon: icon, 
+        onPressed: (){},)
+      );
+  }
+}
 
 class BtnWImg extends StatelessWidget {
   const BtnWImg({super.key, required this.url , required this.col});
@@ -521,48 +467,44 @@ class BtnWImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-                        height: 50,
-                        width: 50,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: col,
-                          borderRadius: BorderRadius.circular(50)
-                        ),
-                        child: Container(
-                          height: 47,
-                          width: 47,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(47)
-                          ),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              
-                              borderRadius: BorderRadius.circular(60)
-                            ),
-                            child: TextButton(
-
-                              onPressed: (){},
-                              style: ButtonStyle(
-                                padding: MaterialStateProperty.all(const EdgeInsets.all(1)),
-                                backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(0, 0, 0, 0)),
-                                
-                                ),
-                              child: CircleAvatar(
-                                  minRadius: double.infinity,
-                                  backgroundImage: NetworkImage(
-                                    '$url',
-                                    ), 
-                              ),
-                          
-                              ),
-                            ),
-                          )
-                        );
+      height: 50,
+      width: 50,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: col,
+        borderRadius: BorderRadius.circular(50)
+      ),
+      child: Container(
+        height: 47,
+        width: 47,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(47)
+        ),
+        child: Container(
+          height: 60,
+          width: 60,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(60)
+          ),
+          child: TextButton(
+            onPressed: (){},
+            style: ButtonStyle(
+            padding: MaterialStateProperty.all(const EdgeInsets.all(1)),
+            backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(0, 0, 0, 0)),
+            ),
+            child: CircleAvatar(
+              minRadius: double.infinity,
+              backgroundImage: NetworkImage(
+                '$url',
+              ), 
+            ),      
+          ),
+        ),
+      ),
+    );
                       
   }
 }
